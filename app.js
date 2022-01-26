@@ -5,7 +5,7 @@ const { MongoClient } = require('mongodb');
 // connection string a la base de datos
 // unique resource identifier
 
-const uri = "mongodb+srv://root:root@cluster0.uxg9l.mongodb.net";
+const uri = "mongodb+srv://root:root@cluster0.r0ggj.mongodb.net";
 
 // configuramos una nueva instancia de conexión MongoDB
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -37,8 +37,8 @@ async function find(price) {
         return;
     }
 
+    console.log("Apartamento:",apartment);
     console.log(apartment.price);
-    console.log(apartment.listing_url);
 
     await client.close();
 
